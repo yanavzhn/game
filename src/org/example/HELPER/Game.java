@@ -101,13 +101,16 @@ class Human { // Класс Человек
                 System.out.println("Подумайте лучше.\nПодсказка: да или нет\n ");
                 answer = scan.nextLine();
             }
-            if (answer.equals("да")) {
+            if (answer.equals("да") & money>=10 ) {
                 money -= 10;
                 HP = 100;
                 System.out.printf("%s купил доп. услуги у больницы за 10 монет. Итого здоровье полностью восстановлено. \n", name);
             } else if (answer.equals("нет")) {
                 System.out.printf("%s зажмотил 10 монет и ушел из больницы со здоровьем %d.\n", name, HP);
 
+            }
+            else {
+                System.out.printf("%s бомжара,вали отсюда, чтобы без деняк не приходил, чмо\n", name);
             }
         } else {
             System.out.println("У вас максимальное здоровье, пиздуйте пить пиво и возвращайтесь :-))) ");
